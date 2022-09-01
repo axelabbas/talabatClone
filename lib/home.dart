@@ -6,6 +6,104 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+
+  Map categoryMap = {
+    'first category': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'idk': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+    '321 rest': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    '343': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+    '3123434 rest': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'man help me': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+    'f': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'name': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+
+  };
+  Map cardsMap = {
+    'Exclusive':Icons.not_started_rounded,
+    'nice':Icons.not_started_rounded,
+    'fadel':Icons.not_started_rounded,
+    'placer':Icons.not_started_rounded,
+    'idk':Icons.not_started_rounded,
+    'ma,e':Icons.not_started_rounded,
+
+  };
+  Map restMap = {
+    'first rest': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'idk': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+     '321 rest': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    '343': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+     '3123434 rest': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'man help me': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+     'f': {
+      'image':'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg',
+      'h':100.0,
+      'w':100.0
+    },
+    'name': {
+      'image':'https://t-urll.com/vfXmS',
+      'h':100.0,
+      'w':100.0
+    },
+
+  };
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,84 +123,63 @@ class _homePageState extends State<homePage> {
         ),
       body: SafeArea(
         child: Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                  Container(
-                    height: 150,
-                    width: 400,
-                    child: ListView(
-                      reverse: true,
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                        categorycard('food','https://t-urll.com/vfXmS',100,100),
-                      ],
-                    ),
-                  ),
+          child: Column(
+            children: [
                 Container(
+                  height: 150,
                   width: 400,
-                  height: 445,
-                  child: ListView(
-
-                    children: [
-                      Align(
-                        alignment: Alignment.topRight,
-                          child: Text('المحلات الاكثر شيوعا',style: TextStyle(fontSize:25,color: Colors.redAccent,fontWeight: FontWeight.bold),)),
-                      Divider(height: 10,thickness: 1,color: Colors.redAccent,indent: 120,),
-                      Container(
-                        height: 150,
-                        width: 400,
-                        child: ListView(
-                          reverse: true,
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                            restcard('الاسم','https://t-urll.com/vfXmS',100,250),
-                          ],
-                        ),
-                      ),Container(
-                        height: 75,
-                        width: 400,
-                        child: ListView(
-                          reverse: true,
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            typecard('حصري',Icons.star_outline,),
-                            typecard("توصيل مجاني",Icons.card_giftcard,),
-                            typecard('حصري',Icons.star_outline,),
-                            typecard('حصري',Icons.star_outline,),
-                            typecard('حصري',Icons.star_outline,),
-                            typecard('حصري',Icons.star_outline,),
-                          ],
-                        ),
-                      ),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
-                    ],
+                  //newmap.values.elementAt(index)['h'], newmap.values.elementAt(index)['w'], newmap.values.elementAt(index)['image'], newmap.keys.elementAt(index)));
+                  child: ListView.builder(
+                    itemCount: categoryMap.length,
+                    itemBuilder:  (BuildContext context, int index) {
+                      return  categorycard(categoryMap.keys.elementAt(index),categoryMap.values.elementAt(index)['image'],categoryMap.values.elementAt(index)['h'],categoryMap.values.elementAt(index)['w']);},
+                    reverse: true,
+                    scrollDirection: Axis.horizontal,
                   ),
-                )
-              ],
-            ),
+                ),
+              Container(
+                width: 400,
+                height: MediaQuery.of(context).size.height-270,
+                child: ListView(
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                        child: Text('المحلات الاكثر شيوعا',style: TextStyle(fontSize:25,color: Colors.redAccent,fontWeight: FontWeight.bold),)),
+                    Divider(height: 10,thickness: 1,color: Colors.redAccent,indent: 120,),
+                    Container(
+                      height: 150,
+                      width: 400,
+                      child: ListView.builder(
+                        itemCount: restMap.length,
+                        itemBuilder:  (BuildContext context, int index) {
+                          return  categorycard(restMap.keys.elementAt(index),restMap.values.elementAt(index)['image'],restMap.values.elementAt(index)['h'],restMap.values.elementAt(index)['w']);},
+                        reverse: true,
+                        scrollDirection: Axis.horizontal,
+                      ),
+                    ),Container(
+                      height: 75,
+                      width: 400,
+                      child:  ListView.builder(
+                        itemCount: cardsMap.length,
+                        itemBuilder:  (BuildContext context, int index) {
+                          return  typecard(cardsMap.keys.elementAt(index),cardsMap.values.elementAt(index));
+                          },
+                        reverse: true,
+                        scrollDirection: Axis.horizontal,
+                      ),
+                    ),
+//                          typecard('حصري',Icons.star_outline,),
+
+                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
+                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
+                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
+                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
+                    infocard('https://t-urll.com/vfXmS', 'name', 'Baghdad', 'Great'),
+
+                  ],
+                ),
+              )
+            ],
           ),
         ),
       ),
